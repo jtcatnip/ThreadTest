@@ -1,6 +1,7 @@
 import logging
 import threading
 import time
+import thread1
 
 
 def thread_function(name):
@@ -10,8 +11,8 @@ def thread_function(name):
 
 
 if __name__ == "__main__":
-    format = "%(asctime)s: %(message)s"
-    logging.basicConfig(format=format, level=logging.INFO,
+    formatting = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=formatting, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
     logging.info("Main    : before creating thread")
@@ -19,5 +20,12 @@ if __name__ == "__main__":
     logging.info("Main    : before running thread")
     x.start()
     logging.info("Main    : wait for the thread to finish")
-    # x.join()
+    x.join()
     logging.info("Main    : all done")
+
+    t1 = thread1.Thread1("cat")
+    print("sum:", t1.add(3, 4))
+    print("sub:", t1.sub(3, 4))
+
+
+
