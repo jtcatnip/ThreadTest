@@ -30,3 +30,5 @@ if __name__ == "__main__":
     t1: Thread1 = thread1.Thread1("cat")
     print("sum:", t1.add(3, 4))
     print("sub:", t1.sub(3, 4))
+    print("static test: ", thread2.Thread2.get_value(55))
+

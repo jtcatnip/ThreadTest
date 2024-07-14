@@ -13,3 +13,7 @@ class Thread2:
         print("Starting to sleep")
         time.sleep(self.num)
         print("Completed sleep")
+
+    @staticmethod
+    def get_value(x):
+        return x
