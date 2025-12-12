@@ -7,7 +7,7 @@ class Thread2:
     def __init__(self, name):
         self.num = 0
         self.name = name
-        print("Thread2: ", self.name)
+        print("Thread2 initializing: ", self.name)
 
     def wait(self, num: object) -> object:
         print("Starting to sleep")
